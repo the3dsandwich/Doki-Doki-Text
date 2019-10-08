@@ -128,26 +128,43 @@ table {
     border-spacing: 0;
 }
 
-body {
-    font-size: 2em;
-}
-
 #app {
     width: 100vw;
     height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 0.5em;
+    display: table-cell;
+    vertical-align: bottom;
+    animation: bg 100s infinite;
 }
 
-#text {
-    width: 85%;
-    position: absolute;
-    bottom: 3em;
+@keyframes bg {
+    0% {
+        background: white;
+    }
+    99.5% {
+        background: #160200;
+    }
+    99.6%{
+        background: url("./img/bg.jpg") fixed center repeat;
+    }
+    100% {
+        background: url("./img/bg.jpg") fixed center repeat;
+        background-size: 200%
+    }
+}
+
+#text .container {
+    width: 90vw;
+    height: 30vh;
+    margin: 5vw auto;
+    background: #f2d2b6;
+    overflow: hidden;
+    border-radius: 20px;
 }
 
 #text p {
-    width: 100%;
+    width: 90%;
+    padding: 5%;
     overflow-wrap: break-word;
+    font-size: 2em;
+    color: #590a03;
 }

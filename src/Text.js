@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 
+
 function Text({ text }) {
     const [textState, setTextState] = useState([]);
     const [displayText, setDisplayText] = useState("");
@@ -21,7 +22,9 @@ function Text({ text }) {
 
     return (
         <div id="text">
-            <p>{displayText}</p>
+            <div className="container">
+                <p>{displayText}</p>
+            </div>
         </div>
     );
 }
